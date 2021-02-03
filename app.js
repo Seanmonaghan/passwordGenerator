@@ -36,10 +36,125 @@ function generatePassword(length, number, upper, lower, symbol) {
       finalProduct.push(pickFromArray(symbolArray));
       i++;
     }
-    
     return(finalProduct);
 
-    // (number = True) (upper = True) (lower = True)
+  } else if (number) {
+    var finalProduct = [];
+    
+    for (i = 0; i < length;) {
+      if (i > length - 1) {break;}
+      finalProduct.push(pickFromArray(numberArray));
+      i++;
+    }
+    return(finalProduct);
+
+  } else if (upper) {
+    var finalProduct = [];
+    
+    for (i = 0; i < length;) {
+      if (i > length - 1) {break;}
+      finalProduct.push(pickFromArray(uppercaseArray));
+      i++;
+    } 
+    return(finalProduct);
+  } else if (lower) {
+    var finalProduct = [];
+    
+    for (i = 0; i < length;) {
+      if (i > length - 1) {break;}
+      finalProduct.push(pickFromArray(lowercaseArray));
+      i++;
+    }
+    return(finalProduct);
+    
+  } else if (symbol) {
+    var finalProduct = [];
+    
+    for (i = 0; i < length;) {
+      if (i > length - 1) {break;}
+      finalProduct.push(pickFromArray(symbolArray));
+      i++;
+    }
+    return(finalProduct);
+    
+  } else if (numbers && upper) {
+    var finalProduct = [];
+    
+    for (i = 0; i < length;) {
+      if (i > length - 1) {break;}
+      finalProduct.push(pickFromArray(numberArray));
+      i++;
+      if (i > length - 1) {break;}
+      finalProduct.push(pickFromArray(uppercaseArray));
+      i++;
+    }
+    return(finalProduct);
+
+  } else if (numbers && lower) {
+    var finalProduct = [];
+    
+    for (i = 0; i < length;) {
+      if (i > length - 1) {break;}
+      finalProduct.push(pickFromArray(numberArray));
+      i++;
+      if (i > length - 1) {break;}
+      finalProduct.push(pickFromArray(lowercaseArray));
+      i++;
+    }
+    return(finalProduct);
+    
+  } else if (numbers && symbol) {
+    var finalProduct = [];
+    
+    for (i = 0; i < length;) {
+      if (i > length - 1) {break;}
+      finalProduct.push(pickFromArray(numberArray));
+      i++;
+      if (i > length - 1) {break;}
+      finalProduct.push(pickFromArray(symbolArray));
+      i++;
+    }
+    return(finalProduct);
+    
+  } else if (upper && lower) {
+    var finalProduct = [];
+    
+    for (i = 0; i < length;) {
+      if (i > length - 1) {break;}
+      finalProduct.push(pickFromArray(uppercaseArray));
+      i++;
+      if (i > length - 1) {break;}
+      finalProduct.push(pickFromArray(lowercaseArray));
+      i++;
+    }
+    return(finalProduct);
+    
+  } else if (upper && symbol) {
+    var finalProduct = [];
+    
+    for (i = 0; i < length;) {
+      if (i > length - 1) {break;}
+      finalProduct.push(pickFromArray(uppercaseArray));
+      i++;
+      if (i > length - 1) {break;}
+      finalProduct.push(pickFromArray(symbolArray));
+      i++;
+    }
+    return(finalProduct);
+    
+  } else if (lower && symbol) {
+    var finalProduct = [];
+    
+    for (i = 0; i < length;) {
+      if (i > length - 1) {break;}
+      finalProduct.push(pickFromArray(lowercaseArray));
+      i++;
+      if (i > length - 1) {break;}
+      finalProduct.push(pickFromArray(symbolArray));
+      i++;
+    }
+    return(finalProduct);
+    
   } else if (number && upper && lower) {
     var finalProduct = [];
     
@@ -54,9 +169,8 @@ function generatePassword(length, number, upper, lower, symbol) {
       finalProduct.push(pickFromArray(lowercaseArray));
       i++;
     }
-    
     return(finalProduct);
-    // (No Lower)
+    
   } else if (number && upper && symbol) {
     var finalProduct = [];
     
@@ -71,9 +185,8 @@ function generatePassword(length, number, upper, lower, symbol) {
       finalProduct.push(pickFromArray(symbolArray));
       i++;
     }
-    
     return(finalProduct);
-    // (No Upper)
+    
   } else if (number && lower && symbol) {
     var finalProduct = [];
     
@@ -88,17 +201,13 @@ function generatePassword(length, number, upper, lower, symbol) {
       finalProduct.push(pickFromArray(symbolArray));
       i++;
     }
-    
     return(finalProduct);
-    // (number = True) (upper = True) (lower = True) (symbol = True)
+    
   } else if (upper && lower && symbol) {
     var finalProduct = [];
     
     for (i = 0; i < length;) {
       if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(numberArray));
-      i++;
-      if (i > length - 1) {break;}
       finalProduct.push(pickFromArray(uppercaseArray));
       i++;
       if (i > length - 1) {break;}
@@ -108,211 +217,10 @@ function generatePassword(length, number, upper, lower, symbol) {
       finalProduct.push(pickFromArray(symbolArray));
       i++;
     }
-    
     return(finalProduct);
-    // (number = True) (upper = True) (lower = True) (symbol = True)
-  } else if (number === true && upper === true && lower === true &&  symbol === true) {
-    var finalProduct = [];
     
-    for (i = 0; i < length;) {
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(numberArray));
-      i++;
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(uppercaseArray));
-      i++;
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(lowercaseArray));
-      i++;
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(symbolArray));
-      i++;
-    }
-    
-    return(finalProduct);
-    // (number = True) (upper = True) (lower = True) (symbol = True)
-  } else if (number === true && upper === true && lower === true &&  symbol === true) {
-    var finalProduct = [];
-    
-    for (i = 0; i < length;) {
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(numberArray));
-      i++;
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(uppercaseArray));
-      i++;
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(lowercaseArray));
-      i++;
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(symbolArray));
-      i++;
-    }
-    
-    return(finalProduct);
-    // (number = True) (upper = True) (lower = True) (symbol = True)
-  } else if (number === true && upper === true && lower === true &&  symbol === true) {
-    var finalProduct = [];
-    
-    for (i = 0; i < length;) {
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(numberArray));
-      i++;
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(uppercaseArray));
-      i++;
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(lowercaseArray));
-      i++;
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(symbolArray));
-      i++;
-    }
-    
-    return(finalProduct);
-    // (number = True) (upper = True) (lower = True) (symbol = True)
-  } else if (number === true && upper === true && lower === true &&  symbol === true) {
-    var finalProduct = [];
-    
-    for (i = 0; i < length;) {
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(numberArray));
-      i++;
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(uppercaseArray));
-      i++;
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(lowercaseArray));
-      i++;
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(symbolArray));
-      i++;
-    }
-    
-    return(finalProduct);
-    // (number = True) (upper = True) (lower = True) (symbol = True)
-  } else if (number === true && upper === true && lower === true &&  symbol === true) {
-    var finalProduct = [];
-    
-    for (i = 0; i < length;) {
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(numberArray));
-      i++;
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(uppercaseArray));
-      i++;
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(lowercaseArray));
-      i++;
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(symbolArray));
-      i++;
-    }
-    
-    return(finalProduct);
-   // (number = True) (upper = True) (lower = True) (symbol = True)
-  } else if (number === true && upper === true && lower === true &&  symbol === true) {
-    var finalProduct = [];
-    
-    for (i = 0; i < length;) {
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(numberArray));
-      i++;
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(uppercaseArray));
-      i++;
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(lowercaseArray));
-      i++;
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(symbolArray));
-      i++;
-    }
-    
-    return(finalProduct);
-    // (number = True) (upper = True) (lower = True) (symbol = True)
-  } else if (number === true && upper === true && lower === true &&  symbol === true) {
-    var finalProduct = [];
-    
-    for (i = 0; i < length;) {
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(numberArray));
-      i++;
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(uppercaseArray));
-      i++;
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(lowercaseArray));
-      i++;
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(symbolArray));
-      i++;
-    }
-    
-    return(finalProduct);
-    // (number = True) (upper = True) (lower = True) (symbol = True)
-  } else if (number === true && upper === true && lower === true &&  symbol === true) {
-    var finalProduct = [];
-    
-    for (i = 0; i < length;) {
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(numberArray));
-      i++;
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(uppercaseArray));
-      i++;
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(lowercaseArray));
-      i++;
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(symbolArray));
-      i++;
-    }
-    
-    return(finalProduct);
-    // (number = True) (upper = True) (lower = True) (symbol = True)
-  } else if (number === true && upper === true && lower === true &&  symbol === true) {
-    var finalProduct = [];
-    
-    for (i = 0; i < length;) {
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(numberArray));
-      i++;
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(uppercaseArray));
-      i++;
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(lowercaseArray));
-      i++;
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(symbolArray));
-      i++;
-    }
-    
-    return(finalProduct);
-    // (number = True) (upper = True) (lower = True) (symbol = True)
-  } else if (number === true && upper === true && lower === true &&  symbol === true) {
-    var finalProduct = [];
-    
-    for (i = 0; i < length;) {
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(numberArray));
-      i++;
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(uppercaseArray));
-      i++;
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(lowercaseArray));
-      i++;
-      if (i > length - 1) {break;}
-      finalProduct.push(pickFromArray(symbolArray));
-      i++;
-    }
-    
-    return(finalProduct);
-    // (number = True) (upper = True) (lower = True) (symbol = True)
   } else {
-    alert("You must select at least one of the criteria for the password to be generated.")
+    alert("You must select at least one of the criteria for the password to be generated.");
   }
 
   
