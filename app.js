@@ -13,30 +13,33 @@ function pickFromArray(array) {
   return selection;
 }
 
-function generatePassword(length, number, upper, lower, symbol) {
+// figure out how to concat strings
+
+
+
+function generatePassword(length, number, lower, upper, symbol) {
   if (!number && !upper && !lower && !symbol) {
-  // if (number == false && upper == false && lower == false && symbol == false ) {
     alert("You must select at least one of the criteria for the password to be generated.");
     return;
   }
   if (number) {
-    charSpace.concat(numberArray);
+    charSpace = [...charSpace, ...numberArray];
     finalProduct.push(pickFromArray(numberArray));
   } if (lower) {
-    charSpace.concat(lowercaseArray);
+    charSpace = [...charSpace, ...lowercaseArray];
     finalProduct.push(pickFromArray(lowercaseArray));
   } if (upper) {
-    charSpace.concat(uppercaseArray);
+    charSpace = [...charSpace, ...uppercaseArray];
     finalProduct.push(pickFromArray(uppercaseArray));
   } if (symbol) {
-    charSpace.concat(symbolArray);
+    charSpace = [...charSpace, ...symbolArray];
     finalProduct.push(pickFromArray(symbolArray));
   } 
-  
+  console.log(charSpace);
   while (finalProduct.length < length) {
     finalProduct.push(pickFromArray(charSpace));
   } 
-
+  
   return(finalProduct);
 }
 
