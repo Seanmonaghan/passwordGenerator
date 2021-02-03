@@ -13,7 +13,7 @@ body,
 }
 
 body {
-  font-family: sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   background-color: #d9dab0;
 }
 
@@ -33,7 +33,7 @@ header {
 
 .card {
   background-color: #f4f5db;
-  border-radius: 5px;
+  border-radius: 1rem;
   border-width: 1px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
   color: hsl(206, 17%, 28%);
