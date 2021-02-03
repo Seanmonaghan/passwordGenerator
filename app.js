@@ -221,12 +221,8 @@ function generatePassword(length, number, upper, lower, symbol) {
     
   } else {
     alert("You must select at least one of the criteria for the password to be generated.");
-  }
-
-  
+  } 
 }
-
-
 function writePassword() {
   
   let length = Number(prompt("Enter a whole number between 8 and 128 for the length of your password."));
