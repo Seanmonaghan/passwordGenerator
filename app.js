@@ -13,8 +13,15 @@ function pickFromArray(array) {
   return selection;
 }
 
-// figure out how to concat strings
-
+/* Randomize array in-place using Durstenfeld shuffle algorithm */
+function shuffleArray(array) {
+  for (var i = array.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
+  }
+}
 
 
 function generatePassword(length, number, lower, upper, symbol) {
@@ -35,10 +42,15 @@ function generatePassword(length, number, lower, upper, symbol) {
     charSpace = [...charSpace, ...symbolArray];
     finalProduct.push(pickFromArray(symbolArray));
   } 
-  console.log(charSpace);
+  
   while (finalProduct.length < length) {
     finalProduct.push(pickFromArray(charSpace));
   } 
+  
+  console.log(finalProduct);
+  //randomize Final Product before returning
+
+  shuffleArray(finalProduct);
   
   return(finalProduct);
 }
