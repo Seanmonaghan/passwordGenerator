@@ -21,6 +21,8 @@ and will prompt the user for the password criteria.
 The app will validate that the criteria are properly selected and inform
 the user if they have performed any errors.
 
+![validation code snippet](assets/images/validation.jpg)
+
 The criteria that the app looks for when selecting a password is the 
 length of the password, and then if the user wants to include lower case 
 letters, upper case letters, numbers and/or symbols.
