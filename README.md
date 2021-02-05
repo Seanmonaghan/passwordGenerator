@@ -20,6 +20,7 @@ and will prompt the user for the password criteria.
 
 ```
 ![password requirement code snippet](./assets/images/lengthreq.jpg)
+<br>
 ![password requirement code snippet](./assets/images/confirm.jpg)
 
 ```
@@ -37,6 +38,7 @@ the password.
 
 ```
 ![pick from array function](./assets/images/pickfromarray.jpg)
+<br>
 ![validation code snippet](./assets/images/validate.jpg)
 
 ```
@@ -63,5 +65,5 @@ inherent commas from the array and then passed into the text area on the html wh
 user is then able to view their generated password.  
 
 ```
-![pass generation screenshot](./assets/images/generate.jpg)
+![pass generation screenshot](./assets/images/generage.jpg)
 
