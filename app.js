@@ -23,7 +23,7 @@ function shuffleArray(array) {
   }
 }
 
-
+//  Determine which selectors are chosen, then add those to a master list 'charSpace'
 function generatePassword(length, number, lower, upper, symbol) {
   if (!number && !upper && !lower && !symbol) {
     alert("You must select at least one of the criteria for the password to be generated.");
@@ -47,13 +47,16 @@ function generatePassword(length, number, lower, upper, symbol) {
     finalProduct.push(pickFromArray(charSpace));
   } 
   
-  console.log(finalProduct);
+  
   //randomize Final Product before returning
 
   shuffleArray(finalProduct);
   
   return(finalProduct);
 }
+
+// Prompt the user for what character types they want in the password, then run generatePassword
+// then randomize and display as passwordText.value
 
 function writePassword() {
   
