@@ -23,7 +23,7 @@ the user if they have performed any errors.
 
 ```
 
-![validation code snippet](./assets/images/validation.jpg)
+![validation code snippet](./assets/images/validate.jpg)
 
 ```
 
